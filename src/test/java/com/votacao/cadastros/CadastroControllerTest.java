@@ -51,23 +51,4 @@ public class CadastroControllerTest {
 
     }
 
-    @Test
-    public void deveConsultarTodosOsEleitores() throws Exception{
-        var eleitor = new Eleitor();
-        eleitor.setNome("José da Silva");
-        eleitor.setCpf("123.123.123-12");
-        eleitor.setInscricao("111222333");
-        eleitor.setSecao("1234");
-        eleitor.setZona("AB");
-
-        repository.save(eleitor);
-
-        String content = mapper.writeValueAsString(eleitor);
-
-        mockMvc.perform(MockMvcRequestBuilders
-                .get("/"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-        .andExpect(MockMvcResultMatchers.jsonPath("$[0].nome", Matchers.contains("José da Silva") ));
-    }
-
 }
