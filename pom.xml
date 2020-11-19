@@ -12,7 +12,7 @@
 	<artifactId>cadastros</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cadastros</name>
-	<description>Microsserviço de cadastro no sistema de votação</description>
+	<description>Microsserviço de cadastro no sistema</description>
 
 	<properties>
 		<java.version>11</java.version>
